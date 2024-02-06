@@ -1,3 +1,4 @@
+#el quicksort
 def quicksort(arr):
     if len(arr) <= 1:
         return arr
@@ -17,7 +18,7 @@ def quicksort(arr):
 
         # S'aplica recursivament Quicksort a les subllistes menor i major
         return quicksort(lesser) + [pivot] + quicksort(greater)
-    
+   
 bombers = [
     {
         "id": 1,
@@ -62,9 +63,9 @@ def modificar_hores():
     print("Error. ID no encontrada.")
 
 def llistarBombers():
-    bombers_ordenats = quicksort(bombers)
+    bombers_ordenats = quicksort(bombers) #ordena la llista con el quicksort
     print("\nLlista de Bombers (ordenats per hores):")
-    for bomber in bombers_ordenats:
+    for bomber in bombers_ordenats: #itera sobre la llista ordenada
         print(f"Nom: {bomber['nombre']}, Hores: {bomber['horas']}")
 
 while True:
@@ -82,7 +83,7 @@ while True:
     elif opcio == "3":
         llistarBombers()
     elif opcio == "4":
-        print("fin del programa.")
+        print("adeu")
         break
     else:
         print("Error")
